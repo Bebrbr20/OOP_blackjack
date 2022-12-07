@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hrac
+namespace OOP_blackjack
 {
-    internal class Hrac
+    public class Hrac
     {
-        internal string Jmeno;
-        internal string Score;
-        internal int Vek;
-        //int RodneCislo;
+        public string Jmeno;
+        public int Score;
+        public int Vek;
+      
 
         internal Hrac() { }
         internal Hrac(string _jmeno, string _score, int _vek)

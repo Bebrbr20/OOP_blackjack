@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace krupier
+namespace OOP_blackjack
 {
     internal class Krupier
     {
