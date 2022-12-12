@@ -3,24 +3,24 @@ using System;
 
 namespace OOP_blackjack
 {
-    class Program
+    public class Program
     {
-        static void Main()
+        private Balicek balicek;
+        public void Hrat()
         {
-            Console.WriteLine("Vítej ve hře, zadej tvoje jméno :");
-            string name = Console.ReadLine();
+            bool pokracovaniHry = true;
 
-            Console.WriteLine("Zadej tvůj věk :");
-            string age = Console.ReadLine();
+            GameMenu.PlayerName();
+            var name = Console.ReadLine();
 
-            Hrac Hrac1 = new Hrac()
-            {
-                Jmeno = name,
-                Score = 0,
-                Vek = age
-            };
+            GameMenu.PlayerAge();
+            var age = Convert.ToInt32(Console.ReadLine());
 
-            
+            var hrac =  new Hrac(name, 0, age);
+
+            var krupier = new Krupier();
+
+            balicek = new Balicek();
         }
     }
 }

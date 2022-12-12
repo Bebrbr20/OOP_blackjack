@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOP_blackjack
 {
-    internal class Karta
+    public enum Vzor
+    {
+
+    }
+    public class Karta
     {
     }
+
 }

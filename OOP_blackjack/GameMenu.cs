@@ -11,6 +11,14 @@ namespace OOP_blackjack
         internal void MainMenu() 
         {
             Console.WriteLine("Vítejte ve hře");
-        }
+          
     }
+        public static void PlayerName()
+        {
+            Console.WriteLine("Vítej ve hře, zadej tvoje jméno :");
+        }
+        public static void PlayerAge()
+        {
+            Console.WriteLine("Zadej tvůj věk :");
+        }
 }

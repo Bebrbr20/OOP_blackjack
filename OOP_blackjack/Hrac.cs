@@ -9,12 +9,12 @@ namespace OOP_blackjack
     public class Hrac
     {
         public string Jmeno;
-        public int Score;
+        public int Score = 0;
         public int Vek;
       
 
-        internal Hrac() { }
-        internal Hrac(string _jmeno, string _score, int _vek)
+        public Hrac() { }
+        public Hrac(string _jmeno, int _score, int _vek)
         {
             this.Jmeno = _jmeno;
             this.Score = _score;
