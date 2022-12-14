@@ -8,11 +8,11 @@ namespace OOP_blackjack
 {
     internal class GameMenu
     {
-        internal void MainMenu() 
+        internal void MainMenu()
         {
             Console.WriteLine("Vítejte ve hře");
-          
-    }
+
+        }
         public static void PlayerName()
         {
             Console.WriteLine("Vítej ve hře, zadej tvoje jméno :");
@@ -21,4 +21,5 @@ namespace OOP_blackjack
         {
             Console.WriteLine("Zadej tvůj věk :");
         }
+    }
 }
