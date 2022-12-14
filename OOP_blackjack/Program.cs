@@ -8,11 +8,12 @@ namespace OOP_blackjack
         private Balicek balicek;
         static void Main()
         {
-            //Hra.Hra();
+            Hra hra1  =  new Hra();
+            hra1.Hranice();
             Karta k1 = new Karta("s", "10");
 
             Console.WriteLine(k1.Nazev);
-            k1.Nazev = "";
+           // k1.Nazev = "";
         }
     }
 }

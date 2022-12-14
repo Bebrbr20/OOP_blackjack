@@ -11,7 +11,7 @@ namespace OOP_blackjack
 
         public Balicek Balicek { get; set; }
       
-        public  Hra()
+        public void Hranice()
         {
         bool pokracovaniHry = true;
 
@@ -21,7 +21,7 @@ namespace OOP_blackjack
         GameMenu.PlayerAge();
             var age = Convert.ToInt32(Console.ReadLine());
 
-        var hrac = new Hrac(name, 0, age);
+            var hrac = new Hrac(name, 0, age);
 
        //var krupier = new Krupier(!);
 
