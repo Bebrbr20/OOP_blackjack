@@ -21,6 +21,11 @@ namespace OOP_blackjack
             var krupier = new Krupier();
 
             balicek = new Balicek();
+
+            while (pokracovaniHry)
+            {
+
+            }
         }
     }
 }

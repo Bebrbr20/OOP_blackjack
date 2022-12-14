@@ -21,6 +21,8 @@ namespace OOP_blackjack
             this.Vek = _vek;
         }
 
+        
+
 
 
     }

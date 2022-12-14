@@ -10,9 +10,15 @@ namespace OOP_blackjack
     {
         private List<Karta> balicek;
 
-        public Deck()
+        public Balicek()
         {
-            deck = new List<Karta>(52);
+            balicek = new List<Karta>(52);
+            VytvorBalicek();
+        }
+
+        private void VytvorBalicek()
+        {
+
         }
     }
 }

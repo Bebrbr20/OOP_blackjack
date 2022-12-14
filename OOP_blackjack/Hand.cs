@@ -9,4 +9,5 @@ namespace OOP_blackjack
     internal class Hand
     {
     }
+   
 }
