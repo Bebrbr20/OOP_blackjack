@@ -9,10 +9,8 @@ namespace OOP_blackjack
     internal class Krupier
     {
         internal string Jmeno = "Karel";
-       
-        //int RodneCislo;
 
-        internal Krupier() { }
+
         internal Krupier(string _jmeno)
         {
             this.Jmeno = _jmeno;

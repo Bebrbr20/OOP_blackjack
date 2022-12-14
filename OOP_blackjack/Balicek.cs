@@ -8,17 +8,17 @@ namespace OOP_blackjack
 {
     public class Balicek
     {
-        private List<Karta> balicek;
+    public List<Karta> Karty = new List<Karta>();
 
-        public Balicek()
+        public Balicek(string[] barvy, string[] hodnoty)
         {
-            balicek = new List<Karta>(52);
-            VytvorBalicek();
-        }
-
-        private void VytvorBalicek()
-        {
-
+            foreach (var barva in barvy)
+            {
+                foreach (var hodnota in hodnoty)
+                {
+                    Karty.Add(new Karta(barva, hodnota));
+                }
+            }
         }
     }
 }

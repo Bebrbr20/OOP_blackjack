@@ -9,12 +9,16 @@ namespace OOP_blackjack
    
     public class Karta
     {
-        public Karta(string barva, string hodnota)
-        {
-            
+       public string Barva { get; set; }
+        public string Symbol { get; set; }
 
-            
-        } 
+        public string Nazev { get { return Barva + Symbol; } }
+
+        public Karta(string barva, string symbol)
+        {
+            Barva = barva;
+            Symbol = symbol;
+        }
     } 
 
 }
