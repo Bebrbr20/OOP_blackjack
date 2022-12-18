@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OOP_blackjack
+﻿namespace OOP_blackjack
 {
     public class Hra
     {
@@ -43,13 +37,15 @@ namespace OOP_blackjack
                 };
 
             } while (mainMenuRes >= 5);
-           
+
         }
         internal static void GameStart()
         {
-            Balicek = new Balicek(new string[] { "♥", "♦", "♣", "♠" }, new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q","K", "A" });
+               var Balicek = new Balicek(new string[] { "♥", "♦", "♣", "♠" }, new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" });
+            
 
+                Console.WriteLine(Balicek.Karty);
         }
     }
-    
+
 }

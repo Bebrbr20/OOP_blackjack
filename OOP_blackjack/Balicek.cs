@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_blackjack
 {
-    public  class Balicek
+    public class Balicek
     {
     public List<Karta> Karty = new List<Karta>();
 
