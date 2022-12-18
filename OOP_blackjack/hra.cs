@@ -10,28 +10,46 @@ namespace OOP_blackjack
     {
 
         public Balicek Balicek { get; set; }
-      
+
         public void Hranice()
         {
-        bool pokracovaniHry = true;
+            bool pokracovaniHry = true;
 
-        GameMenu.PlayerName();
+            GameMenu.PlayerName();
             var name = Console.ReadLine();
 
-        GameMenu.PlayerAge();
-            var age = Convert.ToInt32(Console.ReadLine());
 
-            var hrac = new Hrac(name, 0, age);
 
-       //var krupier = new Krupier(!);
+            var hrac = new Hrac(name, 1000);
 
-            //balicek = new Balicek();
-           
-            while (pokracovaniHry)
+            var krupier = new Krupier("Karel");
+
+            Krupier.Welcome(hrac.Jmeno, krupier.Jmeno);
+
+            System.Threading.Thread.Sleep(1000);
+
+            int mainMenuRes = 10;
+            do
             {
-                Balicek = new Balicek(new string[] { "♥", "♦", "♣", "♠" }, new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "A" });
-            }
+                mainMenuRes = GameMenu.MainMenu();
+
+                switch (mainMenuRes)
+                {
+                    case 1:
+                        GameStart();
+                        break;
+
+
+                };
+
+            } while (mainMenuRes >= 5);
+           
         }
-        
-}
+        internal static void GameStart()
+        {
+            Balicek = new Balicek(new string[] { "♥", "♦", "♣", "♠" }, new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q","K", "A" });
+
+        }
+    }
+    
 }

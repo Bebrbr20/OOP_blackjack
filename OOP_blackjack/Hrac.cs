@@ -10,18 +10,24 @@ namespace OOP_blackjack
     {
         public string Jmeno;
         public int Score = 0;
-        public int Vek;
+        
       
 
         public Hrac() { }
-        public Hrac(string _jmeno, int _score, int _vek)
+        public Hrac(string _jmeno, int _score)
         {
             this.Jmeno = _jmeno;
             this.Score = _score;
-            this.Vek = _vek;
+            
         }
 
-        
+        internal static void Kredity(string Score)
+        {
+            Console.WriteLine("Aktuálně máš"+ Score +"kreditů");
+
+        }
+
+
 
 
 

@@ -10,10 +10,7 @@ namespace OOP_blackjack
         {
             Hra hra1  =  new Hra();
             hra1.Hranice();
-            Karta k1 = new Karta("s", "10");
-
-            Console.WriteLine(k1.Nazev);
-           // k1.Nazev = "";
+            
         }
     }
 }
