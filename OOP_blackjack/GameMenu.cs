@@ -45,8 +45,26 @@ namespace OOP_blackjack
         {
             Console.WriteLine("Vítej ve hře, zadej tvoje jméno :");
         }
+        public static void Pravidla()
+        {
+            Console.WriteLine("Blackjack nebo také black jack je karetní hra často provozovaná v kasinu.");
+            System.Threading.Thread.Sleep(4000);
+            Console.WriteLine("Předchůdcem blackjacku je francouzská karetní hra vingt-et-un („dvacet jedna“), která se objevila ve francouzských kasinech kolem roku 1700.");
+            System.Threading.Thread.Sleep(4000);
+            Console.WriteLine("Každý hráč na začátku hry obdrží dvě karty a pak mu krupiér nabízí další karty.");
+            System.Threading.Thread.Sleep(4000);
+            Console.WriteLine("Hráč se po každé rozhoduje, zda bude chtít další, nebo ne. ");
+            System.Threading.Thread.Sleep(4000);
+            Console.WriteLine("Každý hráč na začátku hry obdrží dvě karty a pak mu krupiér nabízí další karty.");
+            System.Threading.Thread.Sleep(4000);
+            Console.WriteLine("Základní princip hry je, že hráč chce mít hodnotu karet blíže 21 než krupiér, ale přitom 21 nepřekročit. ");
+            System.Threading.Thread.Sleep(4000);
+            Console.WriteLine("Vyhrává ten, kdo má po ukončení hry v ruce nejvyšší součet, aniž by překročil 21.");
+            System.Threading.Thread.Sleep(4000);
+            Console.WriteLine("Hráč, který má v ruce součet karet větší než 21, je takzvaně „trop“ neboli „přes“.");
+        }
 
-        
+
 
     }
 }

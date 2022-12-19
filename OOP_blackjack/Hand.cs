@@ -13,7 +13,7 @@ namespace OOP_blackjack
             for (int i = 0; i < Pocet; i++)
             {
                 Random random = new Random();
-                //int start2 = random.Next(0, caminohormiga.Length);
+
             }
 
         }
