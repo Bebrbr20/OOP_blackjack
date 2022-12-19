@@ -70,6 +70,9 @@ namespace OOP_blackjack
             {
                 Console.WriteLine("Prohrál jsi, máš přes 21");
                 hit = false;
+            }else if (Balicek.CountRuka(hracBalicek) == 21)
+            {
+                hit = false;
             }
        
             if(hit == true)
@@ -120,10 +123,11 @@ namespace OOP_blackjack
 
                 Console.WriteLine("Konec hry!");
                 System.Threading.Thread.Sleep(1000);
-                Balicek.KartyDealer(krupierBalicek);
+                Balicek.KartyRukaDealer(krupierBalicek);
                 Balicek.KartyRuka(hracBalicek);
+                Console.WriteLine();
 
-                if(Balicek.CountRuka(hracBalicek) > 21)
+                if (Balicek.CountRuka(hracBalicek) > 21)
             {
                     Console.WriteLine("Prohrál jsi, máš přes 21");
                     hit = false;
@@ -141,6 +145,8 @@ namespace OOP_blackjack
                 {
                     Console.WriteLine("Prohrál jsi, dealer má více!");
                 }
+
+                Console.WriteLine();
             }
 
 

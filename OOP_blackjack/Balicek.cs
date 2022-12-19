@@ -130,6 +130,15 @@ namespace OOP_blackjack
             }
             Console.WriteLine("a celkový součet je " + CountRuka(Karty));
         }
+        internal static void KartyRukaDealer(List<Karta> Karty)
+        {
+            Console.Write("Dealerovy karty jsou: ");
+            foreach (var karta in Karty)
+            {
+                Console.Write(karta.Nazev + " ");
+            }
+            Console.WriteLine("a celkový součet je " + CountRuka(Karty));
+        }
 
         internal static void KartyDealer(List<Karta> Karty)
         {
