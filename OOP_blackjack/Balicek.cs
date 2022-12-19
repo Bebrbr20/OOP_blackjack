@@ -89,14 +89,32 @@ namespace OOP_blackjack
                         soucet += 10;
                         break;
                     case "J":
-                        soucet += 11;
+                        soucet += 10;
                         break;
                     case "Q":
-                        soucet += 11;
+                        soucet += 10;
                         break;
                     case "K":
-                        soucet += 11;
+                        soucet += 1;
                         break;
+                }
+            }
+            foreach (var karta in Karty)
+            {
+                switch (karta.Symbol)
+                {
+                    case "A":
+                        if (soucet > 11)
+                        {
+                            soucet += 1;
+                        }
+                        else
+                        {
+                            soucet += 11;
+                        }
+                        break;
+
+                    
                 }
             }
 
@@ -118,6 +136,8 @@ namespace OOP_blackjack
             
             Console.WriteLine("Dealer má " + Karty[0].Nazev);
         }
+
+        
 
     }
 }

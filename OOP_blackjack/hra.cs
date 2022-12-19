@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace OOP_blackjack
 {
@@ -25,12 +27,12 @@ namespace OOP_blackjack
 
             System.Threading.Thread.Sleep(1000);
 
-            int mainMenuRes = 10;
-            do
+            bool mainMenuRes = true;
+            while (mainMenuRes == true)
             {
-                mainMenuRes = GameMenu.MainMenu();
+                var res = GameMenu.MainMenu();
 
-                switch (mainMenuRes)
+                switch (res)
                 {
                     case 1:                 
                         GameStart();
@@ -40,23 +42,24 @@ namespace OOP_blackjack
                         break;
                     case 3:
                         GameMenu.Pravidla();
-                        mainMenuRes = 10;
-                        continue;
+                        
+                        break;
                     case 4:
-                        GameStart();
+                       System.Environment.Exit(1);
                         break;
 
 
                 };
 
-            } while (mainMenuRes >= 5);
+            }
 
         }
         internal static void GameStart()
         {
             bool hit = true;
                var Balicek = new Balicek(new string[] { "♥", "♦", "♣", "♠" }, new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" });
-               var hracBalicek = Balicek.Lizni(2, Balicek.Karty);
+            
+            var hracBalicek = Balicek.Lizni(2, Balicek.Karty);
                var krupierBalicek = Balicek.Lizni(1, Balicek.Karty);
 
             Balicek.KartyDealer(krupierBalicek);
@@ -68,47 +71,85 @@ namespace OOP_blackjack
                 Console.WriteLine("Prohrál jsi, máš přes 21");
                 hit = false;
             }
-
-            if (Balicek.CountRuka(krupierBalicek) > 21)
+       
+            if(hit == true)
             {
-                Console.WriteLine("Vyhrál jsi, dealer má přes 21");
-                hit = false;
-            }
-
-            
-            if(hit = true)
-            {
-                int prubeh = 10;
+                bool intswitch = true;
                 do
                 {
-                    prubeh = GameMenu.InGameMenu();
-
+                    int prubeh = GameMenu.InGameMenu();
+                    Random random = new Random();
                     switch (prubeh)
                     {
                         case 1:
-                            Random random = new Random();
-                            int num = random.Next(hracBalicek.Count);
-                            List<Karta> lizni = Balicek.Lizni(1, hracBalicek);
-                            hracBalicek.AddRange(lizni);
-                            hracBalicek.Add(lizni);
+                            
+                                List<Karta> lizni = new List<Karta>();
+
+                                lizni = Balicek.Lizni(1, Balicek.Karty);
+                                hracBalicek.AddRange(lizni);
+
+                                Balicek.KartyRuka(hracBalicek);
+                            if (Balicek.CountRuka(hracBalicek) >= 21)
+                            {                        
+                                intswitch = false;
+                            }
 
                             break;
                         case 2:
+                            while (Balicek.CountRuka(krupierBalicek) < 20)
+                            {
+                                Console.WriteLine("Krupiér si líže...");
+                                System.Threading.Thread.Sleep(1000);
+                               
+                                List<Karta> liznik = new List<Karta>();
 
+                                liznik = Balicek.Lizni(1, Balicek.Karty);
+                                krupierBalicek.AddRange(liznik);
+
+                               // Balicek.KartyRuka(krupierBalicek);
+                            }
+                            intswitch = false;
                             break;
 
 
                     };
 
-                } while (prubeh >= 3);
-                Console.WriteLine(hracBalicek);
+                } while (intswitch == true);
+
+
+
+                Console.WriteLine("Konec hry!");
+                System.Threading.Thread.Sleep(1000);
+                Balicek.KartyDealer(krupierBalicek);
+                Balicek.KartyRuka(hracBalicek);
+
+                if(Balicek.CountRuka(hracBalicek) > 21)
+            {
+                    Console.WriteLine("Prohrál jsi, máš přes 21");
+                    hit = false;
+                }
+                else if (Balicek.CountRuka(krupierBalicek) > 21)
+                {
+                    Console.WriteLine("Vyhrál jsi, dealer má přes 21");
+                    hit = false;
+                }
+                else if (Balicek.CountRuka(hracBalicek) > Balicek.CountRuka(krupierBalicek))
+                {
+                    Console.WriteLine("Vyhrál jsi, měl jsi více než dealer!");
+                }
+                else
+                {
+                    Console.WriteLine("Prohrál jsi, dealer má více!");
+                }
             }
 
 
-
-
+            
 
         }
+
+        
+
     }
 
 }
