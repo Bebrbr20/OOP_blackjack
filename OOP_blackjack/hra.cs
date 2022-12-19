@@ -34,7 +34,13 @@ namespace OOP_blackjack
 
                 switch (res)
                 {
-                    case 1:                 
+                    case 1:
+                        bool betStatus = true;
+                        while (betStatus == true)
+                        {
+                            int bet = Hrac.Kredity(hrac.Score);
+                            betStatus = false;
+                        }
                         GameStart();
                         break;
                     case 2:
@@ -56,6 +62,9 @@ namespace OOP_blackjack
         }
         internal static void GameStart()
         {
+            
+            
+
             bool hit = true;
                var Balicek = new Balicek(new string[] { "♥", "♦", "♣", "♠" }, new string[] { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A" });
             

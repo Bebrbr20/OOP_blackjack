@@ -9,7 +9,7 @@ namespace OOP_blackjack
     public class Hrac
     {
         public string Jmeno;
-        public int Score = 0;
+        public int Score = 1000;
         
       
 
