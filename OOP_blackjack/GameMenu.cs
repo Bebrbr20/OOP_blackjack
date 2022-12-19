@@ -63,6 +63,32 @@ namespace OOP_blackjack
             System.Threading.Thread.Sleep(4000);
             Console.WriteLine("Hráč, který má v ruce součet karet větší než 21, je takzvaně „trop“ neboli „přes“.");
         }
+        internal static int InGameMenu()
+        {
+
+            Console.WriteLine("(L)íznout");
+            Console.WriteLine("(S)tát");
+            
+
+            string input = "";
+
+            input = Console.ReadLine();
+
+
+            switch (input.ToLower())
+            {
+                case "l":
+                    return 1;
+                    break;
+                case "s":
+                    return 2;
+                    break;
+          
+                default: return 10;
+
+            };
+
+        }
 
 
 

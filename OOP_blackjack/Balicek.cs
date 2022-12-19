@@ -42,7 +42,7 @@ namespace OOP_blackjack
             return Ruka;
         }
 
-        public int CountRuka(List<Karta> Karty)
+        public static int CountRuka(List<Karta> Karty)
         {
             int soucet = 0;
 
@@ -53,54 +53,71 @@ namespace OOP_blackjack
                     case "A":
                         if (soucet > 11)
                         {
-                            soucet = +1;
+                            soucet += 1;
                         }
                         else
                         {
-                            soucet = +11;
+                            soucet += 11;
                         }
                         break;
 
                     case "2":
-                        soucet = +2;
+                        soucet += 2;
                         break;
                     case "3":
-                        soucet = +3;
+                        soucet += 3;
                         break;
                     case "4":
-                        soucet = +4;
+                        soucet += 4;
                         break;
                     case "5":
-                        soucet = +5;
+                        soucet += 5;
                         break;
                     case "6":
-                        soucet = +6;
+                        soucet += 6;
                         break;
                     case "7":
-                        soucet = +7;
+                        soucet += 7;
                         break;
                     case "8":
-                        soucet = +8;
+                        soucet += 8;
                         break;
                     case "9":
-                        soucet = +9;
+                        soucet += 9;
                         break;
                     case "10":
-                        soucet = +10;
+                        soucet += 10;
                         break;
                     case "J":
-                        soucet = +11;
+                        soucet += 11;
                         break;
                     case "Q":
-                        soucet = +11;
+                        soucet += 11;
                         break;
                     case "K":
-                        soucet = +11;
+                        soucet += 11;
                         break;
                 }
             }
 
             return soucet;
         }
+
+        internal static void KartyRuka(List<Karta> Karty)
+        {
+            Console.Write("Vaše karty jsou: ");
+            foreach (var karta in Karty)
+            {
+                Console.Write(karta.Nazev + " ");
+            }
+            Console.WriteLine("a celkový součet je " + CountRuka(Karty));
+        }
+
+        internal static void KartyDealer(List<Karta> Karty)
+        {
+            
+            Console.WriteLine("Dealer má " + Karty[0].Nazev);
+        }
+
     }
 }
