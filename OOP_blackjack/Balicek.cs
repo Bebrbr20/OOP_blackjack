@@ -95,7 +95,7 @@ namespace OOP_blackjack
                         soucet += 10;
                         break;
                     case "K":
-                        soucet += 1;
+                        soucet += 10;
                         break;
                 }
             }

@@ -21,7 +21,7 @@ namespace OOP_blackjack
             
         }
 
-        internal static void Kredity(string Score)
+        internal static void Kredity(int Score)
         {
             Console.WriteLine("Aktuálně máš"+ Score +"kreditů");
 
